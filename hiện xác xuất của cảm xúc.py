@@ -90,7 +90,7 @@ def main(args):
         cv2.imshow("Face Detection", img)
         key = cv2.waitKey(10)
 
-        if key == 27:
+        if key == 27 or cv2.getWindowProperty("Face Detection", cv2.WND_PROP_VISIBLE) < 1:
             break
 
     cam.release()
