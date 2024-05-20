@@ -20,9 +20,22 @@ python cảm_xúc_khi_cho_ảnh.py --model <tên model:IR_50,IR_50ViT,vgg19,resn
 ```
 
 ## Model đã được train trước 
-Model đã được train trước này dùng để nhận diện khuôn mặt đã được train với 5,822,653 ảnh từ link https://drive.google.com/file/d/1EsGSnY7KlzDTPA2EDWxQ1ey06kivRr0l/view?usp=drive_link
+Model đã được train trước này dùng để nhận diện khuôn mặt đã được train với tập dữ liệu MS-Celeb-1M_Align_112x112 gồm 5,822,653 ảnh từ link https://drive.google.com/file/d/1EsGSnY7KlzDTPA2EDWxQ1ey06kivRr0l/view?usp=drive_link
 
 Sử dụng model này để train 2 model là IR_50 và IR_50ViT
+Còn đối với resnet50 và vgg19 thì dùng model đã được train trước với tập dữ liệu là ImageNet
 ## Đánh giá model
 Tất cả các model đều được train với ảnh 112*112 , mean=[0.5, 0.5, 0.5] , std=[0.5, 0.5, 0.5] và số epoch=40
+# README
 
+## Bảng dữ liệu
+
+| Model    | Pretrain | Nopretrain   |Kích thước|
+|--------|------|-------------|
+| Vgg19    | 86,01%   |80.46%      |558.41 MB|
+| ResNet50    | 84,97%   | 67,69% |94.41 MB|
+| IR_50   | 88,65%   | 80,80%    |123.81 MB|
+| IR_50ViT | 79,36%   | 89%    |351.7 MB|
+
+
+  
