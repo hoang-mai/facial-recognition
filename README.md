@@ -25,17 +25,16 @@ Model đã được train trước này dùng để nhận diện khuôn mặt �
 Sử dụng model này để train 2 model là IR_50 và IR_50ViT
 Còn đối với resnet50 và vgg19 thì dùng model đã được train trước với tập dữ liệu là ImageNet
 ## Đánh giá model
-Tất cả các model đều được train với ảnh 112*112 , mean=[0.5, 0.5, 0.5] , std=[0.5, 0.5, 0.5] và số epoch=40
-# README
+Tất cả các model đều được train với ảnh 112*112 của tập dataset RAF_DB DATASET , mean=[0.5, 0.5, 0.5] , std=[0.5, 0.5, 0.5] và số epoch=40
 
-## Bảng dữ liệu
 
 | Model    | Pretrain | Nopretrain   |Kích thước|
 |--------|------|-------------|----------------|
 | Vgg19    | 86,01%   |80.46%      |558.41 MB|
 | ResNet50    | 84,97%   | 67,69% |94.41 MB|
 | IR_50   | 88,65%   | 80,80%    |123.81 MB|
-| IR_50ViT | 79,36%   | 89%    |351.7 MB|
+| IR_50ViT |  89%  |  79,36%   |351.7 MB|
+Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
 
 
   
