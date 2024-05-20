@@ -36,6 +36,7 @@ Tất cả các model đều được train với ảnh 112*112 của tập data
 | IR_50ViT |  89%  |  79,36%   |351.7 MB|
 
 Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
-Link tới model IR_50ViT [here](https://www.kaggle.com/code/maianhhoang/ir-50-vit/output?scriptVersionId=178496024)
+
+Link tới model IR_50ViT [here](https://drive.google.com/file/d/1ZmAbD3ellYeXf9bNwloH5cXu1DWKS7Tw/view?usp=sharing)
 
   
