@@ -56,7 +56,7 @@ def main(args):
     patience = 15
     best_val_acc = 0
     patience_counter = 0
-    num_epochs = 100
+    num_epochs = 40
     train_losses = []
     val_losses = []
     train_accuracies = []
