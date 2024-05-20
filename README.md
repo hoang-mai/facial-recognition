@@ -23,3 +23,6 @@ python cảm_xúc_khi_cho_ảnh.py --model <tên model:IR_50,IR_50ViT,vgg19,resn
 Model đã được train trước này dùng để nhận diện khuôn mặt đã được train với 5,822,653 ảnh từ link https://drive.google.com/file/d/1EsGSnY7KlzDTPA2EDWxQ1ey06kivRr0l/view?usp=drive_link
 
 Sử dụng model này để train 2 model là IR_50 và IR_50ViT
+## Đánh giá model
+Tất cả các model đều được train với ảnh 112*112 , mean=[0.5, 0.5, 0.5] , std=[0.5, 0.5, 0.5] và số epoch=40
+
