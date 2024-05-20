@@ -34,7 +34,8 @@ Tất cả các model đều được train với ảnh 112*112 của tập data
 | ResNet50    | 84,97%   | 67,69% |94.41 MB|
 | IR_50   | 88,65%   | 80,80%    |123.81 MB|
 | IR_50ViT |  89%  |  79,36%   |351.7 MB|
-Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
 
+Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
+Link tới model IR_50ViT [here](https://www.kaggle.com/code/maianhhoang/ir-50-vit/output?scriptVersionId=178496024)
 
   
