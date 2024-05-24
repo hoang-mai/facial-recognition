@@ -33,10 +33,10 @@ Tất cả các model đều được train với ảnh 112*112 của tập data
 | Vgg19    | 86,01%   |80.46%      |558.41 MB|
 | ResNet50    | 84,97%   | 67,69% |94.41 MB|
 | IR_50   | 88,65%   | 80,80%    |123.81 MB|
-| IR_50ViT |  88,88%  |  79,36%   |348.75 MB|
+| IR_50ViT |  88,88%  |  81.12%   |348.75 MB|
 
 Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
 
-Link tới model IR_50ViT [here](https://drive.google.com/file/d/1ZmAbD3ellYeXf9bNwloH5cXu1DWKS7Tw/view?usp=sharing)
+Link tới model IR_50ViT [here](https://drive.google.com/file/d/1_R-DWByrVQu8Hdvr8vkgAb2mLeLd99dZ/view?usp=sharing)
 
   
