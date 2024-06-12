@@ -24,7 +24,6 @@ class PatchEmbed(nn.Module):
 
         return x
 
-
 class Attention(nn.Module):
     def __init__(self, dim, n_heads=12, qkv_bias=True, attn_p=0., proj_p=0.):
         super().__init__()
@@ -117,9 +116,9 @@ class VisionTransformer(nn.Module):
             patch_size=7,
             in_chans=512,
             n_classes=7,
-            embed_dim=768,
+            embed_dim=763,
             depth=8,
-            n_heads=8,
+            n_heads=7,
             mlp_ratio=4.,
             qkv_bias=True,
             p=0.,
@@ -128,10 +127,10 @@ class VisionTransformer(nn.Module):
         super().__init__()
 
         self.patch_embed = PatchEmbed(
-            img_size=img_size,
-            patch_size=patch_size,
-            in_chans=in_chans,
-            embed_dim=embed_dim,
+                img_size=img_size,
+                patch_size=patch_size,
+                in_chans=in_chans,
+                embed_dim=embed_dim,
         )
         self.cls_token = nn.Parameter(torch.zeros(1, 1, embed_dim))
         self.pos_embed = nn.Parameter(
@@ -178,6 +177,7 @@ class VisionTransformer(nn.Module):
         return x
 
 
+
 class bottleneck_IR(Module):
     def __init__(self, in_channel, depth, stride):
         super(bottleneck_IR, self).__init__()
@@ -209,22 +209,18 @@ def get_block(in_channel, depth, num_units, stride=2):
 class Backbone(Module):
     def __init__(self, input_size, num_layers, mode='ir'):
         super(Backbone, self).__init__()
-        assert input_size[0] in [112], "input_size should be [112, 112] "
-        assert num_layers in [50], "num_layers should be 50"
-        assert mode in ['ir'], "mode should be ir "
+        assert input_size[0] in [112]
+
         blocks = [
             get_block(in_channel=64, depth=64, num_units=3),
             get_block(in_channel=64, depth=128, num_units=4),
             get_block(in_channel=128, depth=256, num_units=14),
             get_block(in_channel=256, depth=512, num_units=3)
         ]
-
         unit_module = bottleneck_IR
-
         self.input_layer = Sequential(Conv2d(3, 64, (3, 3), 1, 1, bias=False),
                                       BatchNorm2d(64),
                                       ReLU(64))
-
         modules = []
         for block in blocks:
             for bottleneck in block:
@@ -242,24 +238,20 @@ class Backbone(Module):
 
 
 def IR_50(input_size):
+    """Constructs a ir-50 model.
+    """
     model = Backbone(input_size, 50, 'ir')
 
     return model
+IR=IR_50((112,112,3))
 
-
-IR = IR_50((112, 112, 3))
-
-
-class IR_50ViT(nn.Module):
+class ResNetViT(nn.Module):
     def __init__(self):
         super().__init__()
-        self.IR = IR
-        self.Vit = VisionTransformer()
-
-    def forward(self, x):
-        x = self.IR(x)
-        x = self.Vit(x)
+        self.IR=IR
+        self.Vit=VisionTransformer()
+    def forward(self,x):
+        x=self.IR(x)
+        x=self.Vit(x)
         return x
-
-
-model = IR_50ViT()
+model=ResNetViT()
