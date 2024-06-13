@@ -207,7 +207,7 @@ def get_block(in_channel, depth, num_units, stride=2):
 
 
 class Backbone(Module):
-    def __init__(self, input_size):
+    def __init__(self, input_size, num_layers, mode='ir'):
         super(Backbone, self).__init__()
         assert input_size[0] in [112]
 
@@ -240,7 +240,7 @@ class Backbone(Module):
 def IR_50(input_size):
     """Constructs a ir-50 model.
     """
-    model = Backbone(input_size)
+    model = Backbone(input_size, 50, 'ir')
 
     return model
 IR=IR_50((112,112,3))
