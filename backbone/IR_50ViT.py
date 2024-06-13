@@ -245,7 +245,7 @@ def IR_50(input_size):
     return model
 IR=IR_50((112,112,3))
 
-class ResNetViT(nn.Module):
+class IR_50ViT(nn.Module):
     def __init__(self):
         super().__init__()
         self.IR=IR
@@ -254,4 +254,4 @@ class ResNetViT(nn.Module):
         x=self.IR(x)
         x=self.Vit(x)
         return x
-model=ResNetViT()
+model=IR_50ViT()
