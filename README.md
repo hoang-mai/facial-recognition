@@ -38,5 +38,5 @@ Tất cả các model đều được train với ảnh 112*112 của tập data
 Lý do model IR_50ViT tốt hơn so với mô hình IR_50 là do model sâu hơn và nhiều trọng số hơn
 
 Link tới model IR_50ViT [here](https://drive.google.com/file/d/1_R-DWByrVQu8Hdvr8vkgAb2mLeLd99dZ/view?usp=sharing)
-
+Link tới model IR_50 [here](https://drive.google.com/file/d/1KwixXWrJBlemIhj70K56vvmEyzNqaw-A/view?usp=sharing)
   
