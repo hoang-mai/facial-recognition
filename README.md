@@ -8,15 +8,15 @@ python train.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --image_train
 3.Test
 
 ```
-python cảm_xúc_có_xác_xuất_cao_nhất.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
+python cam xuc co xac suat cao nhat.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
 ```
 
 ```
-python hiện_xác_xuất_cảm_xúc.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
+python hien xac suat cam xuc.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
 ```
 
 ```
-python cảm_xúc_khi_cho_ảnh.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
+python cam xuc cho anh.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
 ```
 
 ## Model đã được train trước 
