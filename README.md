@@ -3,24 +3,24 @@
 1. Tải dataset RAF-DB DATASET từ link [here](https://www.kaggle.com/datasets/shuvoalok/raf-db-dataset)
 2. Train
 ```
-python train.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --image_train <đường dẫn tới ảnh train> --csv_train <đường dẫn tới csv train> --image_test <đường dẫn tới ảnh test> --csv_test <đường dẫn tới csv test --checkpoint_path <đường dẫn tới model đã được train trước> 
+python <đường đẫn tới file train.py> --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --image_train <đường dẫn tới ảnh train> --csv_train <đường dẫn tới csv train> --image_test <đường dẫn tới ảnh test> --csv_test <đường dẫn tới csv test --checkpoint_path <đường dẫn tới model đã được train trước> 
 ```
 3.Test
 
 ```
-python cam_xuc_co_xac_suat_cao_nhat.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
+python <đường đẫn tới file cam_xuc_co_xac_suat_cao_nhat.py> --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
 ```
 
 ```
-python hien_xac_suat_cam_xuc.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
+python <đường đẫn tới file hien_xac_suat_cam_xuc.py> --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> 
 ```
 
 ```
-python cam_xuc_cho_anh.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
+python <đường đẫn tới file cam_xuc_cho_anh.py> --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
 ```
 
 ```
-python cam_xuc_cho_video.py --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
+python <đường đẫn tới file cam_xuc_cho_video.py> --model <tên model:IR_50,IR_50ViT,vgg19,resnet50> --checkpoint_path <đường dẫn tới model đã được train> --image_path <đường dẫn cho ảnh>
 ```
 ## Model đã được train trước 
 Model đã được train trước này dùng để nhận diện khuôn mặt đã được train với tập dữ liệu MS-Celeb-1M_Align_112x112 gồm 5,822,653 ảnh từ link [here](https://drive.google.com/file/d/1EsGSnY7KlzDTPA2EDWxQ1ey06kivRr0l/view?usp=drive_link)
