@@ -43,6 +43,10 @@ def detect_faces_from_video(args):
 
     cap = cv2.VideoCapture(args.video_path)
 
+    # Define the codec and create VideoWriter object
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (800, 700))
+
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -67,22 +71,22 @@ def detect_faces_from_video(args):
                 frame = cv2.putText(frame, text, (0, 10 + y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
         scaled_frame = cv2.resize(frame, (800, 700))
+        out.write(scaled_frame)  # Write the frame to the output video file
         cv2.imshow("Face Detection", scaled_frame)
 
-
         key = cv2.waitKey(10)
-
         if key == 27 or cv2.getWindowProperty("Face Detection", cv2.WND_PROP_VISIBLE) < 1:
             break
 
     cap.release()
+    out.release()  # Release the video writer
     cv2.destroyAllWindows()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Test')
     parser.add_argument('--model', default='IR_50ViT', type=str, help='tên model cần test')
-    parser.add_argument('--checkpoint_path', default='C:\\Users\\Laptop\\Downloads\\best_model.pth',
+    parser.add_argument('--checkpoint_path', default='C:\\Users\\Laptop\\PycharmProjects\\facial-recognition\\Model\\IR_50ViT.pth',
                         help='đường dẫn tới thư mục chứa file pretrain')
     parser.add_argument('--video_path', default='C:\\Users\\Laptop\\Downloads\\video.mp4',
                         help='đường dẫn chứa video test')

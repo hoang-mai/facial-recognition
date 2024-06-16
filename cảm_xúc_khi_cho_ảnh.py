@@ -90,7 +90,7 @@ if __name__ == '__main__':
     parser.add_argument('--checkpoint_path',
                         default='C:\\Users\\Laptop\\PycharmProjects\\facial-recognition\\Model\\IR_50ViT.pth',
                         help='đường dẫn tới thư mục chứa file pretrain')
-    parser.add_argument('--image_path',default='C:\\Users\Laptop\\Downloads\\tucgian.jpg',help='đường dẫn chứa ảnh test')
+    parser.add_argument('--image_path',default='C:\\Users\Laptop\\Downloads\\kinhtom.jpg',help='đường dẫn chứa ảnh test')
     args = parser.parse_args()
     detect_faces(args)
 
